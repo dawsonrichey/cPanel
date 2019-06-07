@@ -1,0 +1,171 @@
+/**
+ * bxSlider v4.2.4
+ */
+
+/** VARIABLES 
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper{
+  position                  : relative;
+  margin                    : 0;
+  padding                   : 0;
+  *zoom                     : 1;
+  -ms-touch-action          : pan-y;
+      touch-action          : pan-y;
+}
+.bx-viewport{
+  -webkit-transform         : translatez(0);
+    z-index                 : 1;
+}
+.bx-controls{
+    position                : relative;
+    z-index                 : 2;
+}
+/** THEME
+===================================*/
+
+/* LOADER */
+.bx-wrapper .bx-loading{
+  min-height                : 50px;
+  background                : url('../img/bx-loader.gif') center center no-repeat #ffffff;
+  height                    : 100%;
+  width                     : 100%;
+  position                  : absolute;
+  top                       : 0;
+  left                      : 0;
+  z-index                   : 2000;
+}
+
+/* PAGER */
+.bx-wrapper .bx-pager{
+    position                : absolute;
+    bottom                  : 41px;
+    font-family             : Arial;
+    font-size               : .85em;
+    font-weight             : bold;
+    color                   : #666;
+    text-align              : center;
+}
+.bx-wrapper .bx-pager a{
+    display                 : block;
+    width                   : 10px;
+    height                  : 10px;
+    margin                  : 0 5px;
+    text-indent             : -9999px;
+    background              : #fff;
+    outline                 : 0;
+        -moz-border-radius  : 5px;
+     -webkit-border-radius  : 5px;
+             border-radius  : 5px;
+}
+.bx-wrapper .bx-pager a:hover,
+.bx-wrapper .bx-pager a:focus,
+.bx-wrapper .bx-pager a.active{
+    background              : #fff000;
+}
+.bx-wrapper .bx-pager-item{
+    float                   : left;
+    font-size               : 0;
+    line-height             : 0;
+    display                 : inline-block;
+    *zoom                   : 1;
+    *display                : inline;
+}
+
+/* CONTROLS (NEXT / PREV / START / STOP) */
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-next,
+.bx-wrapper .bx-start,
+.bx-wrapper .bx-stop{
+	display					: inline-block;
+    width                   : 32px;
+    height                  : 32px;
+    margin                  : 0 5px;
+    outline                 : 0;
+	font					: normal normal normal 14px/1 FontAwesome;
+	font-size				: inherit;
+	color					: #fff;
+    text-align              : center;
+	text-rendering			: auto;
+    background-color        : #000;
+	 -webkit-font-smoothing	: antialiased;
+	-moz-osx-font-smoothing	: grayscale;
+	              transform : translate(0, 0);
+	  -webkit-border-radius	: 50%;
+	     -moz-border-radius	: 50%;
+	          border-radius	: 50%;
+                     filter : alpha(opacity=50);
+                    opacity : 0.5;
+             -khtml-opacity : 0.5;
+               -moz-opacity : 0.5;
+                 -ms-filter : "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+.bx-wrapper .bx-prev:before{
+    content                : "\f104";
+}
+.bx-wrapper .bx-next:before{
+	content                : "\f105";
+}
+.bx-wrapper .bx-start:before{
+    content                : "\f04b";
+}
+.bx-wrapper .bx-stop:before{
+	content                : "\f04c";
+}
+.bx-wrapper .bx-prev:before,
+.bx-wrapper .bx-next:before{
+    line-height            : 30px;
+}
+.bx-wrapper .bx-start:before,
+.bx-wrapper .bx-stop:before{
+    font-size              : 10px;
+    line-height            : 32px;
+}
+
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus,
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus,
+.bx-wrapper .bx-start:hover,
+.bx-wrapper .bx-start:focus,
+.bx-wrapper .bx-start.active,
+.bx-wrapper .bx-stop:hover,
+.bx-wrapper .bx-stop:focus,
+.bx-wrapper .bx-stop.active{
+	filter		           : alpha(opacity=100);
+	opacity                : 1;
+	-khtml-opacity         : 1;
+	  -moz-opacity         : 1;
+	    -ms-filter         : "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.bx-wrapper .bx-prev.disabled,
+.bx-wrapper .bx-next.disabled{
+	display                : none;
+}
+
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item{
+    float                   : left;
+    display                 : inline-block;
+    *zoom                   : 1;
+    *display                : inline;
+}
+
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption{
+    position                : absolute;
+    bottom                  : 0;
+    left                    : 0;
+    background              : #666;
+    background              : rgba(80, 80, 80, 0.75);
+    width                   : 100%;
+}
+.bx-wrapper .bx-caption span{
+    color                   : #fff;
+    font-family             : Arial;
+    display                 : block;
+    font-size               : .85em;
+    padding                 : 10px;
+}

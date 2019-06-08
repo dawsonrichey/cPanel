@@ -160,6 +160,9 @@ color:#f5f5f5;
 background-color:#2196f3
 }
 
+#appView .powrMark__logo-block, span.powrMark__text {
+  display: none;
+}
 @media only screen and (max-width: 991px) {
 .header {
 width:100%;

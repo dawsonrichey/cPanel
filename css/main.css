@@ -64,8 +64,8 @@ body {
   background-color: #f5f5f5;
   overflow-x: hidden;
   overflow-y: auto;
-  /*background-image: url(../images/main_bg.png);*/
-  background-image: url(https://live.staticflickr.com/2812/11830735015_b820f2b499_k.jpg);
+  background-image: url(../images/main_bg.jpg);
+/*  background-image: url(https://live.staticflickr.com/2812/11830735015_b820f2b499_k.jpg);*/
   background-size: cover;
   -webkit-background-size: cover;
   background-attachment: fixed;
